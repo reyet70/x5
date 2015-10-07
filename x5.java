@@ -64,6 +64,7 @@ void table( float left, float top, float right, float bottom ) {
 //// ACTION:  bounce off walls, collisions
 void bounce() {
   redX += redDX;  if ( redX<left || redX>right ) redDX *= -1;
+  redY += redDY;  if ( redY<top || redY>bottom ) redDY *=  -1;
 }
 void collisions() {
   float tmp;
@@ -83,6 +84,7 @@ void show() {
   fill( 255,255,255 );    ellipse( cueX,cueY, 30,30 );
 }
 void messages() {
+  fill(0);
   text( title, width/3, 20 );
   text( news, width/3, 40 );
   text( author, 10, height-10 );
@@ -95,3 +97,4 @@ void keyPressed() {
     reset();
   }
 }
+
