@@ -5,7 +5,7 @@
 
 String title=  "ELASTIC COLLISIONS";
 String news=   "Use 'r' key to reset.";
-String author=  "Your Name";
+String author=  "Play Time";
 
 
 float left, right, top, bottom;
@@ -18,12 +18,12 @@ float bluX, bluY, bluDX, bluDY;
 
 //// SETUP:  size and table
 void setup() {
-  size( 600, 400 );
+  size( 670, 470);
   left=   50;
   right=  width-50;
   top=    100;
   bottom= height-50;
-  middle= left + (right-left) / 2;
+  middle= left + (right-left) / 4;
   //
   reset();
  }
@@ -42,7 +42,7 @@ void setup() {
 
 //// NEXT FRAME:  table, bounce off walls, collisions, show all
 void draw() {
-  background( 250,250,200 );
+  background( 400,400, 350 );
   rectMode( CORNERS );
   table( left, top, right, bottom );
   bounce();
@@ -53,9 +53,9 @@ void draw() {
 
 //// SCENE:  draw the table with walls
 void table( float left, float top, float right, float bottom ) {
-  fill( 100, 250, 100 );    // green pool table
+  fill( 225, 100, 225 );    // pink pool table
   strokeWeight(20);
-  stroke( 127, 0, 0 );      // Brown walls
+  stroke( 150, 0, 150 );      // Violet walls
   rect( left-20, top-20, right+20, bottom+20 );
   stroke(0);
   strokeWeight(1);
